@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+        // Code to check answers to questions
+            // Part 1
+            function todo(event)
+            {
+                var trigger = event.srcElement;
+                if (trigger.innerHTML == "Perl")
+                {
+                    trigger.style.backgroundColor = "green";
+                    document.querySelector("#answer").innerHTML = "CORRECT!";
+                }
+                else
+                {
+                    trigger.style.backgroundColor = "red";
+                    document.querySelector("#answer").innerHTML = "INCORRECT.";
+                }
+            }
+
+            // Part 2
+            function checkanswer(event)
+            {
+                var input = document.querySelector("#textbox").value;
+                if (input == "NLP")
+                {
+                    document.querySelector("#textbox").style.backgroundColor = "green";
+                    document.querySelector("#answer2").innerHTML = "CORRECT!";
+                }
+                else
+                {
+                    document.querySelector("#textbox").style.backgroundColor = "red";
+                    document.querySelector("#answer2").innerHTML = "INCORRECT.";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- Multiple choice question -->
+
+                <h3>Which of the given language is not commonly used for AI?</h3>
+
+                <label class = "button" onclick = "todo(event)">Python</label>
+                <label class = "button" onclick = "todo(event)">Perl</label>
+                <label class = "button" onclick = "todo(event)">LISP</label>
+                <label class = "button" onclick = "todo(event)">PROLOG</label>
+                <br>
+                <label id = "answer">-</label>
+                <br>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- Free response question -->
+
+                <h3>What is called building a machinery system that can understand and interpret natural human languages.Eg. Siri, Alexa...</h3>
+                <input id = "textbox" type = "text">
+                <input id = "check" type = "submit" value = "Check Answer" onclick = "checkanswer(event)">
+                <br>
+                <label id = "answer2">-</label>
+                <br>
+            </div>
+
+        </div>
+    </body>
+</html>

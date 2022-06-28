@@ -1,0 +1,15 @@
+sort1 uses: bubble sort
+
+How do you know?: takes moderate amount of time in revversed50000.
+Also takes different amount of time in reversed and sorted.
+
+sort2 uses: merged sort
+
+How do you know?: takes least amount of time in reversed50000.
+Also it takes same amount of time in reverse and sorted.
+
+
+sort3 uses: selection sort
+
+How do you know?: Takes max amount of time in reversed50000.
+Also takes same amount of time in reversed and sorted.

@@ -1,0 +1,22 @@
+day = 28 month = 7 year = 2020
+street = "Chamberlin Street"
+
+license_plate
+5P2BI95
+94KL13X
+6P58WS2
+4328GD8
+G412CB7
+L93JTIZ
+322W7JE
+0NTHK55
+
+
+ According to talk on call
+SELECT name
+FROM people
+JOIN phone_calls ON phone_calls
+    SELECT caller, receiver
+    FROM phone_calls
+    WHERE day = 28 AND month = 7 AND year = 2020 AND duration < 60
+    ;

@@ -1,0 +1,77 @@
+body {
+    background : black;
+}
+
+html{
+    height: 100%
+}
+
+p, label, h1, h2, h3, h4, h5, h6, li {
+    color : white;
+}
+
+hr {
+    border-color : grey;
+}
+
+#main_heading_font {
+    color : #e60000;
+    font-family : 'Acme', sans-serif;
+    font-size : 5em;
+    text-align : center;
+}
+
+#img {
+    margin : 1em;
+    height : 2em;
+}
+
+#body {
+    background-image : url("https://images.unsplash.com/photo-1550684376-efcbd6e3f031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.tagline {
+    color : yellow;
+    text-align : center;
+}
+
+.tagcard {
+    max-width : 10em;
+}
+
+.socialmedia {
+    background-color : black;
+    height : 4em;
+}
+
+
+.link {
+    margin : 1em 1em;
+    padding : 0.2em;
+    color : white;
+}
+
+.link:hover {
+    color : black;
+    border : 2px solid #3A3B3C;
+    border-radius : 5px;
+    background-color : white;
+}
+
+.star{
+    height : 1.5em;
+    width : 1.5em;
+}
+
+.radio {
+    padding : 2em;
+    margin : 1em;
+}
+
+.checkbox {
+    padding : 2em;
+    margin : 1em;
+}

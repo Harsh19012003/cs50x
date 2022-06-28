@@ -1,0 +1,15 @@
+./speller dictionaries/large texts/burnett.txt
+
+typedef struct node
+{
+    char word[LENGTH + 1];
+    struct node *next;
+}
+node;
+
+
+// Number of buckets in hash table
+const unsigned int N = 676;
+
+// Hash table
+node *table[N];

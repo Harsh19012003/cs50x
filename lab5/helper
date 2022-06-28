@@ -1,0 +1,15 @@
+stypedef struct person
+{
+    struct person *parents[2];
+    char alleles[2];
+}
+person;
+
+
+GENERATIONS
+
+
+person *create_family(int generations);
+void print_family(person *p, int generation);
+void free_family(person *p);
+char random_allele();

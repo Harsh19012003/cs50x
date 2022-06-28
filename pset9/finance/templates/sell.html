@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <select name="symbol">
+            {% for row in rows %}
+            <option value="{{ row["symbol"] }}">{{ row["symbol"] }}</option>
+            {% endfor %}
+        </select>
+
+        <input type = "text" class = "form-control" name = "shares" placeholder = "Shares" autocomplete="off">
+        <button class="btn btn-primary" type="submit">Sell Stocks</button>
+    </form>
+{% endblock %}

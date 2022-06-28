@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index.html
+{% endblock %}
+
+{% block main %}
+
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th>Stock symbol</th>
+                <th>No of Stocks</th>
+                <th>Current Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row["symbol"] }}</td>
+                <td>{{ row["SUM(transactions.shares)"] }}</td>
+                <td>{{ row["price"] | usd }}</td>
+                <td>{{ (row["SUM(transactions.shares)"] * row["price"]) | usd }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td>{{ rows[0]["cash"] | usd }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ amount | usd }}</td>
+        </tfoot>
+    </table>
+{% endblock %}

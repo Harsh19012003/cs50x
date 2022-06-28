@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div>
+        The Current value of {{ name }} ({{ symbol }}) is ${{ price | usd}}.
+    </div>
+{% endblock %}
